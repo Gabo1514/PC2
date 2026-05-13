@@ -1,0 +1,58 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grid-responsive($columns: 3, $gap: $espaciado-md) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin mobile {
+    @media (max-width: $breakpoint-tablet - 1) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin boton($bg: $color-primario, $color: white) {
+    background-color: $bg;
+    color: $color;
+    padding: $espaciado-xs $espaciado-md;
+    border: none;
+    border-radius: $radio-md;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all $transicion;
+    font-family: $fuente-secundaria;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $sombra-md;
+    }
+}
+
+@mixin contenedor($max-width: 1200px) {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $espaciado-md;
+}

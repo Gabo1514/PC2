@@ -1,0 +1,45 @@
+// Colores
+$color-primario: #c41e3a;
+$color-secundario: #1a1a2e;
+$color-acento: #0f3460;
+$color-texto: #2d3436;
+$color-texto-claro: #636e72;
+$color-fondo: #ffffff;
+$color-fondo-alt: #f8f9fa;
+$color-urgente: #e74c3c;
+
+// Tipografía
+$fuente-principal: 'Georgia', 'Times New Roman', serif;
+$fuente-secundaria: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+// Tamaños
+$texto-xs: 0.75rem;
+$texto-sm: 0.875rem;
+$texto-base: 1rem;
+$texto-lg: 1.125rem;
+$texto-xl: 1.25rem;
+$texto-2xl: 1.5rem;
+$texto-3xl: 1.875rem;
+$texto-4xl: 2.25rem;
+
+// Espaciado
+$espaciado-xs: 0.5rem;
+$espaciado-sm: 1rem;
+$espaciado-md: 1.5rem;
+$espaciado-lg: 2rem;
+$espaciado-xl: 3rem;
+$espaciado-2xl: 4rem;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Otros
+$sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+$sombra-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$sombra-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+$radio-sm: 0.25rem;
+$radio-md: 0.5rem;
+$radio-lg: 0.75rem;
+$transicion: 0.3s ease;

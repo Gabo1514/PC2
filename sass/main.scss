@@ -1,0 +1,297 @@
+// Main SCSS File - Noticias 24/7
+
+// 1. Importar variables y mixins primero
+@import 'variables';
+@import 'mixins';
+
+// 2. Reset y estilos base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-secundaria;
+    color: $color-texto;
+    line-height: 1.6;
+    background-color: $color-fondo-alt;
+}
+
+// 3. Container
+.container {
+    @include contenedor;
+}
+
+// 4. Importar componentes
+@import 'header';
+@import 'footer';
+@import 'cards';
+
+// 5. Hero Section
+.hero {
+    background: linear-gradient(135deg, $color-primario 0%, $color-secundario 100%);
+    color: white;
+    padding: $espaciado-2xl 0;
+    text-align: center;
+
+    &__badge {
+        background-color: $color-urgente;
+        color: white;
+        padding: $espaciado-xs $espaciado-sm;
+        border-radius: 2rem;
+        font-size: $texto-sm;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: $espaciado-sm;
+        animation: pulse 2s infinite;
+    }
+
+    &__title {
+        font-size: $texto-4xl;
+        font-weight: 700;
+        margin-bottom: $espaciado-sm;
+        font-family: $fuente-principal;
+    }
+
+    &__text {
+        font-size: $texto-xl;
+        margin-bottom: $espaciado-lg;
+        opacity: 0.9;
+    }
+
+    &__cta {
+        @include boton(white, $color-primario);
+        font-size: $texto-lg;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+// 6. Breaking News Ticker
+.breaking-news {
+    background-color: $color-secundario;
+    padding: 0.75rem 0;
+    overflow: hidden;
+    margin-top: 0;
+    position: relative;
+
+    &__ticker {
+        display: flex;
+        align-items: center;
+        gap: $espaciado-sm;
+        color: white;
+        overflow: hidden;
+    }
+
+    .ticker__label {
+        background-color: $color-primario;
+        padding: 0.25rem 0.75rem;
+        border-radius: $radio-sm;
+        font-weight: 700;
+        font-size: $texto-sm;
+        flex-shrink: 0;
+        z-index: 10;
+        position: relative;
+    }
+
+    .ticker__text {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 60s linear infinite;
+        padding-left: 2rem;
+    }
+}
+
+@keyframes scroll {
+    from { 
+        transform: translateX(0); 
+    }
+    to { 
+        transform: translateX(-50%); 
+    }
+}
+
+// 7. Page Hero
+.page-hero {
+    background: linear-gradient(135deg, $color-secundario 0%, $color-acento 100%);
+    color: white;
+    padding: $espaciado-xl 0;
+    text-align: center;
+
+    &__title {
+        font-size: $texto-3xl;
+        font-weight: 700;
+        margin-bottom: $espaciado-xs;
+    }
+
+    &__text {
+        font-size: $texto-lg;
+        opacity: 0.9;
+    }
+}
+
+// 8. Section Title
+.section__title {
+    font-size: $texto-3xl;
+    font-weight: 700;
+    color: $color-secundario;
+    margin-bottom: $espaciado-lg;
+    font-family: $fuente-principal;
+    border-left: 4px solid $color-primario;
+    padding-left: $espaciado-sm;
+}
+
+// 9. Featured News
+.featured-news {
+    padding: $espaciado-xl 0;
+    background-color: $color-fondo;
+}
+
+.news__grid {
+    @include grid-responsive(3, $espaciado-lg);
+}
+
+// 10. Categories
+.categories {
+    padding: $espaciado-xl 0;
+}
+
+.categories__grid {
+    @include grid-responsive(3, $espaciado-lg);
+}
+
+// 11. About
+.about {
+    padding: $espaciado-xl 0;
+
+    &__content {
+        display: flex;
+        gap: $espaciado-xl;
+        align-items: center;
+    }
+
+    &__text {
+        flex: 1;
+
+        h2 {
+            font-size: $texto-3xl;
+            color: $color-secundario;
+            margin-bottom: $espaciado-md;
+            font-family: $fuente-principal;
+        }
+
+        p {
+            margin-bottom: $espaciado-sm;
+            line-height: 1.8;
+            color: $color-texto-claro;
+        }
+    }
+
+    &__image {
+        flex: 1;
+    }
+
+    &__photo {
+        width: 100%;
+        height: auto;
+        border-radius: $radio-lg;
+        box-shadow: $sombra-lg;
+    }
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, $color-primario 0%, $color-secundario 100%);
+    height: 300px;
+    border-radius: $radio-lg;
+    @include flex-center;
+    color: white;
+    font-size: $texto-2xl;
+    font-weight: 700;
+}
+
+// 12. Team
+.team {
+    padding: $espaciado-xl 0;
+    background-color: $color-fondo;
+}
+
+.team__grid {
+    @include grid-responsive(3, $espaciado-lg);
+}
+
+// 13. Contact
+.contact {
+    padding: $espaciado-xl 0;
+
+    &__content {
+        display: flex;
+        gap: $espaciado-xl;
+    }
+
+    &__form,
+    &__info {
+        flex: 1;
+
+        h2 {
+            font-size: $texto-3xl;
+            color: $color-secundario;
+            margin-bottom: $espaciado-md;
+            font-family: $fuente-principal;
+        }
+    }
+}
+
+// 14. Form Styles
+.form__group {
+    margin-bottom: $espaciado-md;
+
+    label {
+        display: block;
+        margin-bottom: $espaciado-xs;
+        color: $color-secundario;
+        font-weight: 600;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid #e0e0e0;
+        border-radius: $radio-md;
+        font-family: inherit;
+        transition: border-color $transicion;
+
+        &:focus {
+            outline: none;
+            border-color: $color-primario;
+        }
+    }
+}
+
+.form__submit {
+    @include boton($color-primario, white);
+    width: 100%;
+    font-size: $texto-lg;
+}
+
+// 15. Info Items
+.info__item {
+    margin-bottom: $espaciado-lg;
+
+    h3 {
+        color: $color-secundario;
+        margin-bottom: $espaciado-xs;
+        font-weight: 600;
+    }
+
+    p {
+        color: $color-texto-claro;
+    }
+}
+
+// 16. Importar responsive al final
+@import 'responsive';

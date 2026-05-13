@@ -1,0 +1,56 @@
+// Footer Styles
+.footer {
+    background-color: $color-secundario;
+    color: white;
+    padding: $espaciado-xl 0 $espaciado-md;
+    margin-top: $espaciado-xl;
+
+    &__content {
+        @include flex-between;
+        gap: $espaciado-lg;
+        margin-bottom: $espaciado-lg;
+    }
+
+    &__section {
+        flex: 1;
+
+        h3,
+        h4 {
+            margin-bottom: $espaciado-sm;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: $espaciado-xs 0;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: $espaciado-sm;
+
+        .social__link {
+            color: white;
+            text-decoration: none;
+            padding: $espaciado-xs $espaciado-sm;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: $radio-md;
+            transition: background-color $transicion;
+
+            &:hover {
+                background-color: $color-primario;
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        padding-top: $espaciado-md;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: $texto-sm;
+        }
+    }
+}

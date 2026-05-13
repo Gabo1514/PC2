@@ -1,0 +1,136 @@
+// Cards Styles
+.news-card {
+    background-color: $color-fondo;
+    border-radius: $radio-lg;
+    overflow: hidden;
+    box-shadow: $sombra-md;
+    transition: all $transicion;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $sombra-lg;
+    }
+
+    &--large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &--large &__image {
+        height: 400px;
+    }
+
+    &__content {
+        padding: $espaciado-md;
+    }
+
+    &__category {
+        background-color: $color-primario;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: $radio-sm;
+        font-size: $texto-xs;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 0.75rem;
+    }
+
+    &__title {
+        font-size: $texto-xl;
+        font-weight: 700;
+        color: $color-secundario;
+        margin-bottom: 0.75rem;
+        font-family: $fuente-principal;
+        line-height: 1.3;
+    }
+
+    &--large &__title {
+        font-size: $texto-3xl;
+    }
+
+    &__excerpt {
+        color: $color-texto-claro;
+        margin-bottom: $espaciado-sm;
+        line-height: 1.6;
+    }
+
+    &__meta {
+        display: flex;
+        gap: $espaciado-sm;
+        font-size: $texto-sm;
+        color: $color-texto-claro;
+    }
+}
+
+// Category Cards
+.category-card {
+    background-color: $color-fondo;
+    padding: $espaciado-lg;
+    border-radius: $radio-lg;
+    text-align: center;
+    box-shadow: $sombra-md;
+    transition: all $transicion;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $sombra-lg;
+    }
+
+    &__icon {
+        font-size: 3rem;
+        margin-bottom: $espaciado-sm;
+    }
+
+    &__title {
+        font-size: $texto-2xl;
+        font-weight: 700;
+        color: $color-secundario;
+        margin-bottom: $espaciado-xs;
+    }
+
+    &__text {
+        color: $color-texto-claro;
+        margin-bottom: $espaciado-sm;
+    }
+
+    &__count {
+        display: inline-block;
+        background-color: $color-fondo-alt;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: $texto-sm;
+        color: $color-texto-claro;
+    }
+}
+
+// Team Cards
+.team-card {
+    text-align: center;
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: $espaciado-sm;
+        border: 4px solid $color-primario;
+    }
+
+    &__name {
+        font-size: $texto-xl;
+        font-weight: 700;
+        color: $color-secundario;
+        margin-bottom: 0.25rem;
+    }
+
+    &__role {
+        color: $color-texto-claro;
+    }
+}

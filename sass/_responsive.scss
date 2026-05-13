@@ -1,0 +1,117 @@
+// Responsive Styles
+
+// Tablet
+@include tablet {
+    .news__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-card--large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .categories__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+// Mobile
+@include mobile {
+    .container {
+        padding: 0 $espaciado-sm;
+    }
+
+    // Header responsive
+    .header {
+        &__nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $color-secundario;
+            padding: $espaciado-sm 0;
+            box-shadow: $sombra-md;
+
+            &.active {
+                display: block;
+            }
+
+            .nav__list {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav__link {
+                display: block;
+                padding: $espaciado-sm $espaciado-md;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__menu-toggle {
+            display: block;
+        }
+    }
+
+    // Hero responsive
+    .hero {
+        &__title {
+            font-size: $texto-3xl;
+        }
+
+        &__text {
+            font-size: $texto-base;
+        }
+    }
+
+    // News grid responsive
+    .news__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        &--large {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        &__image,
+        &--large &__image {
+            height: 200px;
+        }
+    }
+
+    // Categories responsive
+    .categories__grid,
+    .team__grid {
+        grid-template-columns: 1fr;
+    }
+
+    // About responsive
+    .about__content {
+        flex-direction: column;
+    }
+
+    // Contact responsive
+    .contact__content {
+        flex-direction: column;
+    }
+
+    // Footer responsive
+    .footer {
+        &__content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__social {
+            justify-content: center;
+        }
+    }
+}
