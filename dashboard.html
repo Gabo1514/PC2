@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Noticias 24/7</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h1>📰 Noticias 24/7</h1>
+                </div>
+                <nav class="header__nav" id="navMenu">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Inicio</a></li>
+                        <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+                        <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+                        <li><a href="dashboard.html" class="nav__link active">Dashboard</a></li>
+                        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="header__btn">Suscríbete</button>
+                <button class="header__menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2 class="page-hero__title">Panel de Control</h2>
+            <p class="page-hero__text">Estadísticas y métricas en tiempo real</p>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard__stats">
+                <div class="stat-card">
+                    <div class="stat-card__icon">📰</div>
+                    <div class="stat-card__content">
+                        <h3 class="stat-card__value">1,245</h3>
+                        <p class="stat-card__label">Noticias Publicadas</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">👥</div>
+                    <div class="stat-card__content">
+                        <h3 class="stat-card__value">45,678</h3>
+                        <p class="stat-card__label">Lectores Activos</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">📊</div>
+                    <div class="stat-card__content">
+                        <h3 class="stat-card__value">89.5%</h3>
+                        <p class="stat-card__label">Engagement</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-card__icon">⭐</div>
+                    <div class="stat-card__content">
+                        <h3 class="stat-card__value">4.8</h3>
+                        <p class="stat-card__label">Calificación</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard__content">
+                <div class="dashboard__main">
+                    <div class="dashboard-card">
+                        <h3 class="dashboard-card__title">Noticias Más Leídas</h3>
+                        <div class="trending-list">
+                            <div class="trending-item">
+                                <span class="trending-item__number">1</span>
+                                <div class="trending-item__content">
+                                    <h4>Aeropuerto de Chinchero</h4>
+                                    <p>12,450 lecturas</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-item__number">2</span>
+                                <div class="trending-item__content">
+                                    <h4>Mundial 2026</h4>
+                                    <p>9,823 lecturas</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-item__number">3</span>
+                                <div class="trending-item__content">
+                                    <h4>James Webb</h4>
+                                    <p>8,567 lecturas</p>
+                                </div>
+                            </div>
+                            <div class="trending-item">
+                                <span class="trending-item__number">4</span>
+                                <div class="trending-item__content">
+                                    <h4>Petroperú</h4>
+                                    <p>7,234 lecturas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3 class="dashboard-card__title">Actividad Reciente</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-item__time">Hace 5 min</span>
+                                <p class="activity-item__text">Nueva noticia publicada: "IA en sector financiero"</p>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-item__time">Hace 15 min</span>
+                                <p class="activity-item__text">10 nuevos comentarios</p>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-item__time">Hace 1 hora</span>
+                                <p class="activity-item__text">Actualización de categoría Deportes</p>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-item__time">Hace 2 horas</span>
+                                <p class="activity-item__text">500 nuevos suscriptores</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard__sidebar">
+                    <div class="dashboard-card">
+                        <h3 class="dashboard-card__title">Categorías Populares</h3>
+                        <div class="categories-chart">
+                            <div class="chart-item">
+                                <div class="chart-item__label">
+                                    <span>Deportes</span>
+                                    <span>35%</span>
+                                </div>
+                                <div class="chart-item__bar">
+                                    <div class="chart-item__fill" style="width: 35%;"></div>
+                                </div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-item__label">
+                                    <span>Tecnología</span>
+                                    <span>28%</span>
+                                </div>
+                                <div class="chart-item__bar">
+                                    <div class="chart-item__fill" style="width: 28%;"></div>
+                                </div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-item__label">
+                                    <span>Economía</span>
+                                    <span>22%</span>
+                                </div>
+                                <div class="chart-item__bar">
+                                    <div class="chart-item__fill" style="width: 22%;"></div>
+                                </div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-item__label">
+                                    <span>Política</span>
+                                    <span>15%</span>
+                                </div>
+                                <div class="chart-item__bar">
+                                    <div class="chart-item__fill" style="width: 15%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3 class="dashboard-card__title">Acciones Rápidas</h3>
+                        <div class="quick-actions">
+                            <button class="quick-action-btn" onclick="openModal()">Nueva Noticia</button>
+                            <button class="quick-action-btn">Ver Reportes</button>
+                            <button class="quick-action-btn">Gestionar Usuarios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&times;</span>
+            <h2 class="modal__title">Publicar Nueva Noticia</h2>
+            <form class="modal__form">
+                <div class="form__group">
+                    <label for="news-title">Título</label>
+                    <input type="text" id="news-title" placeholder="Título de la noticia" required>
+                </div>
+                <div class="form__group">
+                    <label for="news-category">Categoría</label>
+                    <select id="news-category" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="politica">Política</option>
+                        <option value="economia">Economía</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="deportes">Deportes</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="news-content">Contenido</label>
+                    <textarea id="news-content" rows="5" placeholder="Escribe el contenido aquí..." required></textarea>
+                </div>
+                <button type="submit" class="form__submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Noticias 24/7</h3>
+                    <p>Tu fuente confiable de información</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Contacto</h4>
+                    <p>Email: contacto@noticias247.com</p>
+                    <p>Tel: +51 956 234 567</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Síguenos</h4>
+                    <div class="footer__social">
+                        <a href="#" class="social__link">Facebook</a>
+                        <a href="#" class="social__link">Twitter</a>
+                        <a href="#" class="social__link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Noticias 24/7. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

@@ -19,3 +19,12 @@ if (menuToggle && navMenu) {
         }
     });
 }
+
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hidden');
+        }, 1500);
+    }
+});

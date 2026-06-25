@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="loader" id="loader">
+        <div class="loader__spinner"></div>
+        <div class="loader__text">Cargando...</div>
+    </div>
+
     <header class="header">
         <div class="container">
             <div class="header__content">
                 <div class="header__logo">
-                    <h1>📰 Noticias 24/7</h1>
+                    <h1>Noticias 24/7</h1>
                 </div>
                 <nav class="header__nav" id="navMenu">
                     <ul class="nav__list">
                         <li><a href="index.html" class="nav__link">Inicio</a></li>
                         <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
                         <li><a href="servicios.html" class="nav__link active">Servicios</a></li>
+                        <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
                         <li><a href="contacto.html" class="nav__link">Contacto</a></li>
                     </ul>
                 </nav>
                 <button class="header__btn">Suscríbete</button>
-                <button class="header__menu-toggle" id="menuToggle">☰</button>
+                <button class="header__menu-toggle" id="menuToggle">=</button>
             </div>
         </div>
     </header>
@@ -38,42 +44,42 @@
         <div class="container">
             <div class="categories__grid">
                 <div class="category-card">
-                    <div class="category-card__icon">🏛️</div>
+                    <div class="category-card__icon">POL</div>
                     <h3 class="category-card__title">Política</h3>
                     <p class="category-card__text">Análisis político y cobertura gubernamental</p>
                     <span class="category-card__count">245 noticias</span>
                 </div>
 
                 <div class="category-card">
-                    <div class="category-card__icon">💼</div>
+                    <div class="category-card__icon">ECO</div>
                     <h3 class="category-card__title">Economía</h3>
                     <p class="category-card__text">Mercados, finanzas y negocios</p>
                     <span class="category-card__count">189 noticias</span>
                 </div>
 
                 <div class="category-card">
-                    <div class="category-card__icon">💻</div>
+                    <div class="category-card__icon">TEC</div>
                     <h3 class="category-card__title">Tecnología</h3>
                     <p class="category-card__text">Innovación y avances tecnológicos</p>
                     <span class="category-card__count">312 noticias</span>
                 </div>
 
                 <div class="category-card">
-                    <div class="category-card__icon">⚽</div>
+                    <div class="category-card__icon">DEP</div>
                     <h3 class="category-card__title">Deportes</h3>
                     <p class="category-card__text">Resultados y análisis deportivo</p>
                     <span class="category-card__count">428 noticias</span>
                 </div>
 
                 <div class="category-card">
-                    <div class="category-card__icon">🔬</div>
+                    <div class="category-card__icon">CIE</div>
                     <h3 class="category-card__title">Ciencia</h3>
                     <p class="category-card__text">Descubrimientos e investigación</p>
                     <span class="category-card__count">156 noticias</span>
                 </div>
 
                 <div class="category-card">
-                    <div class="category-card__icon">🎭</div>
+                    <div class="category-card__icon">CUL</div>
                     <h3 class="category-card__title">Cultura</h3>
                     <p class="category-card__text">Arte, entretenimiento y espectáculos</p>
                     <span class="category-card__count">203 noticias</span>

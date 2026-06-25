@@ -7,22 +7,44 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="loader" id="loader">
+        <div class="loader__spinner"></div>
+        <div class="loader__text">Cargando...</div>
+    </div>
+
     <header class="header">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="img/team-1.jpg" alt="Miembro del equipo">
+                <p>Juan Pérez - Fundador</p>
+            </div>
+            <div class="team-member">
+                <img src="img/team-2.jpg" alt="Miembro del equipo">
+                <p>Ana Gómez - Directora de Contenidos</p>
+            </div>
+            <div class="team-member">
+                <img src="img/team-3.jpg" alt="Miembro del equipo">
+                <p>Pedro López - Desarrollador Web</p>
+            </div>
+        </div>
+    </header>
         <div class="container">
             <div class="header__content">
                 <div class="header__logo">
-                    <h1>📰 Noticias 24/7</h1>
+                    <h1>Noticias 24/7</h1>
                 </div>
                 <nav class="header__nav" id="navMenu">
                     <ul class="nav__list">
                         <li><a href="index.html" class="nav__link">Inicio</a></li>
                         <li><a href="nosotros.html" class="nav__link active">Nosotros</a></li>
                         <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+                        <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
                         <li><a href="contacto.html" class="nav__link">Contacto</a></li>
                     </ul>
                 </nav>
                 <button class="header__btn">Suscríbete</button>
-                <button class="header__menu-toggle" id="menuToggle">☰</button>
+                <button class="header__menu-toggle" id="menuToggle">=</button>
             </div>
         </div>
     </header>
@@ -43,7 +65,7 @@
                     <p>Con un equipo de más de 100 periodistas en todo el mundo, nos comprometemos a entregar noticias verificadas, análisis profundos y reportajes de investigación que marcan la diferencia.</p>
                 </div>
                 <div class="about__image">
-                    <img src="img/redaccion.jpg" alt="Redacción Noticias 24/7" class="about__photo">
+                    <img src="img/redaccion.jpg" alt="Redacción Noticias 24/7" class="about__photo about-photo-zoom">
                 </div>
             </div>
         </div>
